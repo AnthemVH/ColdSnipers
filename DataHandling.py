@@ -76,3 +76,17 @@ def training_to_vector(Input,outputs):
 x_vec,y_vec = training_to_vector(X,Y)
 print(x_vec,y_vec)
 
+def prompt_to_vec(prompt):
+    prompt_vector = []
+    if len(prompt) < 5:
+        while len(prompt) < 5:
+            prompt.insert(0,"pad")
+    for index in range(len(prompt)):
+        prompt_vector.append(word2vec_model.wv[prompt[index]])
+    return np.array(prompt_vector).flatten()
+
+def slide_prompt(prompt,newword):
+    newprompt = prompt.copy()
+    newprompt.pop(0)
+    newprompt.append(newword)
+    return newprompt

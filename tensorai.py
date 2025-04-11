@@ -12,4 +12,19 @@ model.compile(optimizer='adam',loss=tf.keras.losses.CosineSimilarity(axis=1),met
 x,y = DH.Training_Data(5)
 X,Y = DH.training_to_vector(x,y)
 
-model.fit(np.array(X),np.array(Y),epochs=1000,verbose=1)
+model.fit(np.array(X),np.array(Y),epochs=200,verbose=1)
+
+def respond(prompt):
+    working_prompt = prompt.split()
+    prompt_vec = DH.prompt_to_vec(working_prompt.copy())
+    word = ""
+    response = ""
+    while word != "eos":
+        prediction = model.predict(np.array([prompt_vec]))
+        word = DH.vector_to_word(np.array(prediction).flatten())
+        working_prompt = DH.slide_prompt(working_prompt.copy(),word)
+        response += " " + word
+        prompt_vec = DH.prompt_to_vec(working_prompt.copy())
+    return response
+
+print(respond("pad hey how are you"))
