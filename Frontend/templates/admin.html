@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class = "admin-panel-container">
+        <h1>Admin Panel</h1>
+
+        <div class = "admin-nav">
+            <button onclick = "showPage('events')">Events</button>
+            <button onclick = "showPage('exams')">Exams</button>
+        </div>
+        <div class="admin-page" id="events">
+            <h2>Events Page</h2>
+            <div class = "event-action">
+                <h3>Add Event</h3>
+                <form id = "addEventForm">
+                    <input type="text" name="eventName" placeholder="Event Name" required>
+                    <input type="text" name="eventInfo" placeholder="Event Information" required>
+                    <button type="submit">Add Event</button>
+                </form>
+            </div>
+            <div class = "event-action">
+                <h3>Modify or Delete Event</h3>
+                <select id = "eventSelect">
+                    {% for event in event_data %}
+                        <option value="{{ event[0] }}">{{ event[0] }}</option>
+                    {% endfor %}
+                </select>
+                <input type = "text" id = "modifyEventInfo" placeholder="New Event Information">
+                <button id = "modifyEventBtn">Mod</button>
+                <button id = "removeEventBtn">Remove</button>
+                
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Event Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if event_data %}
+                        {% for event in event_data %}
+                        <tr>
+                            <td>{{ event[0] }}</td> 
+                            <td>{{ event[1] }}</td> 
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="2">No event data available</td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+        <div class = "admin-page" id = "exams">
+            <h2>Exams Page</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Venue</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for exam in exam_data %}
+                    <tr>
+                        <td>{{ exam[0] }}</td> <!-- Title -->
+                        <td>{{ exam[1] }}</td> <!-- Venue -->
+                        <td>{{ exam[2] }}</td> <!-- Date -->
+                        <td>{{ exam[3] }}</td> <!-- Time -->
+                        <td>
+                            <button class="update-btn">Update</button>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="5">No exam data available</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        function showPage(page) {
+            const pages = document.querySelectorAll('.admin-page');
+            pages.forEach(p => p.style.display = 'none');
+            document.getElementById(page).style.display = 'block'; 
+        }
+        showPage('exams');
+
+        document.getElementById("addEventForm").addEventListener("submit", function(event) {
+            
+            
+            const eventName = document.getElementById("eventName").value;
+            const eventInfo = document.getElementById("eventInfo").value;
+            console.log(eventName, eventInfo);
+            fetch('/add_event', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ 
+                    event_name: eventName, 
+                    event_info: eventInfo 
+                })
+            }).then(response => response.json())
+            .then(data =>{
+                console.log(data);
+                location.reload();
+            });
+        });
+        document.getElementById("modifyEventBtn").addEventListener("click", function() {
+            const eventName = document.getElementById("eventSelect").value;
+            const newEventInfo = document.getElementById("modifyEventInfo").value;
+
+            fetch('/modify_event', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ 
+                    event_name: eventName, 
+                    event_info: newEventInfo 
+                })
+            }).then(response => response.json())
+            .then(data =>{
+                console.log(data);
+                location.reload();
+            });
+        });
+        document.getElementById("removeEventBtn").addEventListener("click", function() {
+            const eventName = document.getElementById("eventSelect").value;
+
+            fetch('/remove_event', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ 
+                    event_name: eventName
+                })
+            }).then(response => response.json())
+            .then(data =>{
+                console.log(data);
+                location.reload();
+            });
+        });
+    </script>
+</body>
