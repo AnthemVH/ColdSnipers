@@ -13,6 +13,12 @@ def UpdateModule(module_name,information):
     cursor.execute(f"UPDATE EmbeddingPlacements SET Information = '{information}' WHERE EmbeddingCode = '{module_name}'")
     conn.commit()
 
+def Retrieve_Module(Code):
+    cursor.execute(f"Select Information from EmbeddingPlacements where EmbeddingCode = '{Code}'")
+    Information = f'{Code}' + cursor.fetchone()
+    return Information
+
+
 def AddEvent(Event_name,Event_information):
     cursor.execute("SELECT Information from EmbeddingPlacements Where EmbeddingCode = 'EventList'")
     Eventlist = cursor.fetchone()
