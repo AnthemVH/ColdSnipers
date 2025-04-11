@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-import DataHandling as DH
+import Frontend.DataHandling as DH
 
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(100,activation="leaky_relu",input_shape=(500,)),
