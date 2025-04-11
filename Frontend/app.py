@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from tensorai import respond
 
 app = Flask(__name__)
 @app.route('/')
@@ -10,7 +11,8 @@ def ask():
     user_message = data.get('message')
 
     if user_message:
-        #response = get_response(user_message)
+        print(f"User message: {user_message}")
+        response = respond(user_message.lower())
         return jsonify({'response': response})
     return jsonify({'error': 'No message provided'})
 

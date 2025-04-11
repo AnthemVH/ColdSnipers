@@ -49,6 +49,7 @@ textarea {
     border-radius: 5px;
     resize: none;
     margin-right: 10px;
+    align-self: center;
 }
 
 button{
@@ -74,4 +75,22 @@ button:hover {
 }
 .ask-btn {
     width: 20%;
+}
+.user-message {
+    background-color: #a01404;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    align-self: flex-end;
+}
+.bot-message {
+    background-color: #f1f1f1;
+    color: #a01404;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    align-self: flex-start;
 }

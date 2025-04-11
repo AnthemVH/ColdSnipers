@@ -22,7 +22,7 @@
         const input = document.getElementById("userInput");
         const chatbox = document.getElementById("chatbox");
 
-        if (input.value.trim() === "") {
+        if (input.value.trim() !== "") {
             const userMessage = document.createElement("div");  
             userMessage.classList.add("user-message");
             userMessage.innerText = input.value;
