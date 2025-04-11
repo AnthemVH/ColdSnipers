@@ -26,5 +26,3 @@ def respond(prompt):
         response += " " + word
         prompt_vec = DH.prompt_to_vec(working_prompt.copy())
     return response
-
-print(respond("hey how are you"))
