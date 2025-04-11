@@ -1,50 +1,50 @@
-"Where can I find the campus help desk or info center?": "Building A"
-"Where is the room for the CROs": "Building A upstairs by your left"
-"Where is the clinic for the school": "Building E ground floor, seminar room 12"
-"In which floor number is the seminar room 8": "Building E second floor"
-"Which building is PC lab 9": "Building F second floor"
-"Where is the counselor located": "Building F at the end of the room"
-"Where can I find PC lab 7 & 8": "Building C first floor, follow the signs"
-"Is there an elevator in this building A, B, C, D, E, F": "A (no), B (no), C (no), D (no), E (yes), F (yes)"
-"Are there wheelchair-accessible routes on campus": "Yes, in Building F"
-"What time does the school library ground floor close": "18:00h"
-"Are there vending machines nearby": "Building D ground floor and Building E ground floor"
-"Where is the financial aid office": "Building A first floor, turn left"
-"When is my exam starting": "For most students, the second week of June"
-"Where can I print my assignments on campus": "Building E, ask the IT operator for printing"
-"Who is lecture for Computer Networks/CONE5111":"Rassaki Abdoul - arassaki@iiemsa.co.za"
-"Who is the lecture for Programming/PROG5121":"Yoland Kanyama - email@iie.edu.za"
-"Who is the lecture for Information System/INSY5112":"Ayokunie Familua - afamilua@iie.ac.za"
-"Who is the lecture for Mathemtical Priniciples for Computer/MAPC5112":"Yet to be communicated"
-"What are the assignment/test are due in April":"CONE5111(25th April-assignment), MAPC5112(29 April-assignment),PROG5121(22 April-assignment),INSY5111(8 April-assignment)"
-"What are the assignment/test due May":"CONE5111(20 May - assignment), MAPC5112(TBC), PROG5121(23 May - assignment),INSY5111(5 May - Test)"
-"Who are the tutors email addresses for Computer networks/CONE5111":"CONE5111(Neha Sinh - ST10433945@imconnect.edu.za/ Vimbai Monics - st 10356323@imconnect.edu.za)"
-"Who are the tutors email address for Programming/PROG5121":"PROG5121(Ranil Monterio - ST10448423@imconnect.edu.za/ Wandile Zuke -ST10448895@imconnect.edu.za/ Enhle Mokolo - ST10443720@imconnect.edu.zA)"
-"Who are the tutors email adress for Mathemtical Principles for Computer/MAPC5112":"(Musa Janda - ST10456109@imconnect.edu.za)"
-"Who are the tutors email address Information system/INSY5112":"Yet to be announced"
-"Where is Lecture 4,5,6":"Building C ground floor"
-"Where is lecture 1,2 & 3":"Ground floor in Building B"
-"Where is the tutorial room 3,4 & 5":"1st floor Building B"
-"Where is PC Lab 4 (Engineering)":"1st floor Building B"
-"Where is the IT offices":"1st floor Building B"
-"Where is the social science":"1st floor of Building C"
-"Where is the School of Engineering":"1st floor of Building C"
-"Where is the science and Health":"1st floor of Building C"
-"Where is the Teaching and Learning Offices":"1st floor of Building C"
-"Where is the Tutorial Rooms 15,16,17 & 18":"1st Floor of Building C"
-"Where is PC Lab 7 and 8":"1st Floor Building C"
-"Where is the school Management":"Lower floor Building D"
-"Where is the Tutoria room 2,10 and 11":"Lower ground floor Building D"
-"Where is the seminar rooms 1,2 and 3":"Ground floor Building CD"
-"Where is the Media Centre":"Ground floor Building D"
-"Where is the food Service":"Ground Floor Building D or ground floor in building E"
-"Where is the school of Finance and Accounting":"1st floor Building D"
-"Where is the School of IT":"1st floor of Building D"
-"Where is the Tutorial Rooms 14":"1st floor of Building D"
-"Where is the PC Labs 5 and 6":"1st floor in Building D"
-"Where is the Library":"Ground floor Building E"
-"Where is the research and Postgraduate Studies Unit":"1st floor in Building E"
-"Where is seminar room 10":"1st floor in Building E"
-"Where is the school of Education":"2nd floor in Building E"
-"Where is seminar Rooms 5,6,7,8,9,14,15 and 16":"2nd floor in Building E"
-"Where is the Gym":"lower ground floor in Building F"
+Where can I find the campus help desk or info center?: Building A eos
+Where is the room for the CROs: Building A upstairs by your left eos
+Where is the clinic for the school: Building E ground floor, seminar room 12 eos
+In which floor number is the seminar room 8: Building E second floor eos
+Which building is PC lab 9: Building F second floor eos
+Where is the counselor located: Building F at the end of the room eos
+Where can I find PC lab 7 & 8: Building C first floor, follow the signs eos
+Is there an elevator in this building A, B, C, D, E, F: A (no), B (no), C (no), D (no), E (yes), F (yes) eos
+Are there wheelchair-accessible routes on campus: Yes, in Building F eos
+What time does the school library ground floor close: 18:00h eos
+Are there vending machines nearby: Building D ground floor and Building E ground floor eos
+Where is the financial aid office: Building A first floor, turn left eos
+When is my exam starting: For most students, the second week of June eos
+Where can I print my assignments on campus: Building E, ask the IT operator for printing eos
+Who is lecture for Computer Networks/CONE5111: Rassaki Abdoul - arassaki@iiemsa.co.za eos
+Who is the lecture for Programming/PROG5121: Yoland Kanyama - email@iie.edu.za eos
+Who is the lecture for Information System/INSY5112: Ayokunie Familua - afamilua@iie.ac.za eos
+Who is the lecture for Mathemtical Priniciples for Computer/MAPC5112: Yet to be communicated eos
+What are the assignment/test are due in April: CONE5111(25th April-assignment), MAPC5112(29 April-assignment),PROG5121(22 April-assignment),INSY5111(8 April-assignment) eos
+What are the assignment/test due May: CONE5111(20 May - assignment), MAPC5112(TBC), PROG5121(23 May - assignment),INSY5111(5 May - Test) eos
+Who are the tutors email addresses for Computer networks/CONE5111: CONE5111(Neha Sinh - ST10433945@imconnect.edu.za/ Vimbai Monics - st 10356323@imconnect.edu.za) eos
+Who are the tutors email address for Programming/PROG5121: PROG5121(Ranil Monterio - ST10448423@imconnect.edu.za/ Wandile Zuke -ST10448895@imconnect.edu.za/ Enhle Mokolo - ST10443720@imconnect.edu.zA) eos
+Who are the tutors email adress for Mathemtical Principles for Computer/MAPC5112: (Musa Janda - ST10456109@imconnect.edu.za) eos
+Who are the tutors email address Information system/INSY5112: Yet to be announced eos
+Where is Lecture 4,5,6: Building C ground floor eos
+Where is lecture 1,2 & 3: Ground floor in Building B eos
+Where is the tutorial room 3,4 & 5: 1st floor Building B eos
+Where is PC Lab 4 (Engineering): 1st floor Building B eos
+Where is the IT offices: 1st floor Building B eos
+Where is the social science: 1st floor of Building C eos
+Where is the School of Engineering: 1st floor of Building C eos
+Where is the science and Health: 1st floor of Building C eos
+Where is the Teaching and Learning Offices: 1st floor of Building C eos
+Where is the Tutorial Rooms 15,16,17 & 18: 1st Floor of Building C eos
+Where is PC Lab 7 and 8: 1st Floor Building C eos
+Where is the school Management: Lower floor Building D eos
+Where is the Tutoria room 2,10 and 11: Lower ground floor Building D eos
+Where is the seminar rooms 1,2 and 3: Ground floor Building CD eos
+Where is the Media Centre: Ground floor Building D eos
+Where is the food Service: Ground Floor Building D or ground floor in building E eos
+Where is the school of Finance and Accounting: 1st floor Building D eos
+Where is the School of IT: 1st floor of Building D eos
+Where is the Tutorial Rooms 14: 1st floor of Building D eos
+Where is the PC Labs 5 and 6: 1st floor in Building D eos
+Where is the Library: Ground floor Building E eos
+Where is the research and Postgraduate Studies Unit: 1st floor in Building E eos
+Where is seminar room 10: 1st floor in Building E eos
+Where is the school of Education: 2nd floor in Building E eos
+Where is seminar Rooms 5,6,7,8,9,14,15 and 16: 2nd floor in Building E eos
+Where is the Gym: lower ground floor in Building F eos

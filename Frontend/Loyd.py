@@ -89,4 +89,4 @@ x, y = DH.Training_Data(5)
 X, Y = DH.training_to_vector(x, y)
 train(X, Y, epochs=5000, lr=0.001)
 
-print("\nResponse:", Answer_prompt("hey how are you"))
+print("\nResponse:", Answer_prompt("when is my exam starting"))

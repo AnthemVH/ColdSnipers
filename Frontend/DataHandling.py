@@ -5,10 +5,13 @@ import database as db
 temp_sentences = ["pad hey how are you im good and you eos","pad pad whats your name my name is loyd eos","what colour is the sky the sky is blue eos"]
 Training_sentences = ["hey how are you ,im good and you eos","whats your name ,my name is loyd eos","what colour is the sky ,the sky is blue eos"]
 temp_sentences = []
+with open("Frontend/word2vec_training.txt",'r') as file:
+    for files in file:
+        temp_sentences.append((files.strip()).lower())
+Training_sentences = []
 with open("Frontend/data.txt",'r') as file:
     for files in file:
-        temp_sentences.append(files.strip(':"'))
-
+        Training_sentences.append((files.strip()).lower())
 print(temp_sentences)
 sentences = []
 for index in range(len(temp_sentences)):
@@ -34,7 +37,7 @@ def Training_Data(window_size):
     y_training = []
     split_training = []
     for index in range(len(Training_sentences)):
-        split_sentence = Training_sentences[index].split(",")
+        split_sentence = Training_sentences[index].split(":")
         x = split_sentence[0].split()
         y= split_sentence[1].split()
         if len(x) < window_size:
@@ -50,7 +53,21 @@ def Training_Data(window_size):
                     y_training.append(y[output_index])
             
         elif len(x) > window_size:
-            pass#Sort out later
+            start = x[:5].copy()
+            x_training.append(start)
+            y_training.append(x[window_size])
+            for input_index in range(window_size,len(x)):
+                start.pop(0)
+                start.append(x[input_index])
+                if input_index +1 < len(x):
+                    x_training.append(start)
+                    y_training.append(x[input_index+1])  
+            for output_index in range(0,len(y)):
+                start.pop(0)
+                start.append(y[output_index])
+                if output_index < len(y):
+                    x_training.append(start.copy())
+                    y_training.append(y[output_index]) 
         else:
             x_training.append(x.copy())
             y_training.append(y[0])

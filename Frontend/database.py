@@ -7,6 +7,8 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS EmbeddingPlacements (EmbeddingCode 
 
 cursor.execute("Select * from EmbeddingPlacements")
 print(cursor.fetchall())
+cursor.execute("INSERT INTO EmbeddingPlacements (EmbeddingCode) VALUES ('<EventList>')")
+conn.commit()
 
 def AddModule(module_name):
     cursor.execute(f"INSERT INTO EmbeddingPlacements (EmbeddingCode) VALUES ('{module_name}')")
