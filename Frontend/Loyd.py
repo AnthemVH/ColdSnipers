@@ -8,6 +8,24 @@ bias_one = np.zeros((1, 100))
 weights_two = np.random.randn(100, 100) * np.sqrt(2 / 100)
 bias_two = np.zeros((1, 100))
 
+def save_model(path="model_weights.npz"):
+    np.savez(path,
+             weights_one=weights_one,
+             bias_one=bias_one,
+             weights_two=weights_two,
+             bias_two=bias_two)
+    print(f"Model saved to {path}")
+
+def load_model(path="model_weights.npz"):
+    global weights_one, bias_one, weights_two, bias_two
+    data = np.load(path)
+    weights_one = data["weights_one"]
+    bias_one = data["bias_one"]
+    weights_two = data["weights_two"]
+    bias_two = data["bias_two"]
+    print(f"Model loaded from {path}")
+
+#load_model()
 def leaky_relu(x):
     return np.where(x > 0, x, 0.001 * x)
 
@@ -29,6 +47,14 @@ def cosine_similarity_error(prediction, target):
     projected = (dot / (norm_output ** 2 + 1e-8)) * prediction
     error = -scaling * (target - projected)
     return error
+
+def cosine_accuracy(predictions, targets, threshold=0.95):
+    predictions = predictions / (np.linalg.norm(predictions, axis=1, keepdims=True) + 1e-8)
+    targets = targets / (np.linalg.norm(targets, axis=1, keepdims=True) + 1e-8)
+    cosine_similarities = np.sum(predictions * targets, axis=1)
+    correct = np.sum(cosine_similarities >= threshold)
+    accuracy = correct / len(predictions)
+    return accuracy
 
 def predict(x):
     hidden = leaky_relu(np.dot(x, weights_one) + bias_one)
@@ -64,10 +90,16 @@ def train(inputs, targets, epochs, lr):
         total_outputs = np.vstack(total_outputs)
         targets_batch = np.vstack(targets)
         loss = cosine_similarity_loss(total_outputs, targets_batch)
-        print(f"Epoch {epoch + 1}/{epochs} - Loss: {loss:.6f}")
+        accuracy = cosine_accuracy(total_outputs,targets_batch)
+        print(f"Epoch {epoch + 1}/{epochs} - Loss: {loss:.6f} - Accuracy: {accuracy:.4f}")
 
 def respond(prompt):
-    working_prompt = prompt.split()
+    prompt_bigger_window = False
+    if len(prompt.split()) > 5:
+        working_prompt = prompt.split()[:5]
+        prompt_bigger_window = True
+    else:
+        working_prompt = prompt.split()
     prompt_vec = DH.prompt_to_vec(working_prompt.copy())
     response = ""
     word = ""
@@ -77,16 +109,23 @@ def respond(prompt):
         word = DH.vector_to_word(prediction.flatten())
         working_prompt = DH.slide_prompt(working_prompt, word)
         prompt_vec = DH.prompt_to_vec(working_prompt)
-        response += " " + word
+        if prompt_bigger_window == True:
+            if (prompt.split()[-1] == word) or (index == ((len(prompt.split()))-5)):
+                prompt_bigger_window = False
+        else:
+            response += " " + word
         index += 1
+    print(response)
     return response.strip()
 
 def Answer_prompt(prompt):
     return DH.Fromat_respone(response=respond(prompt))
 
-# === Train and respond ===
+
+
 x, y = DH.Training_Data(5)
 X, Y = DH.training_to_vector(x, y)
-train(X, Y, epochs=5000, lr=0.001)
+train(X, Y, epochs=10000, lr=0.01)
+save_model()
 
 print("\nResponse:", Answer_prompt("when is my exam starting"))

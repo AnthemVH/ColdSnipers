@@ -5,10 +5,7 @@ cursor = conn.cursor()
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS EmbeddingPlacements (EmbeddingCode text,Information text)''')
 
-cursor.execute("Select * from EmbeddingPlacements")
-print(cursor.fetchall())
-cursor.execute("INSERT INTO EmbeddingPlacements (EmbeddingCode) VALUES ('<EventList>')")
-conn.commit()
+
 
 def AddModule(module_name):
     cursor.execute(f"INSERT INTO EmbeddingPlacements (EmbeddingCode) VALUES ('{module_name}')")
@@ -18,9 +15,10 @@ def UpdateModule(module_name,information):
     cursor.execute(f"UPDATE EmbeddingPlacements SET Information = '{information}' WHERE EmbeddingCode = '{module_name}'")
     conn.commit()
 
+
 def Retrieve_Module(Code):
     cursor.execute(f"Select Information from EmbeddingPlacements where EmbeddingCode = '{Code}'")
-    Information = f'{Code}' + cursor.fetchone()
+    Information = cursor.fetchone()[0]
     return Information
 
 

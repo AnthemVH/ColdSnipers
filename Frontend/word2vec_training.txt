@@ -48,3 +48,31 @@ Where is seminar room 10 1st floor in Building E eos
 Where is the school of Education 2nd floor in Building E eos
 Where is seminar Rooms 5,6,7,8,9,14,15 and 16 2nd floor in Building E eos
 Where is the Gym lower ground floor in Building F eos
+When is the MAPC1112 exam the MAPC1112 exam details are <MAPC1112> eos
+What date is the MAPC1112 exam scheduled for the MAPC1112 exam details are <MAPC1112> eos
+When do we write MAPC1112 the MAPC1112 exam details are <MAPC1112> eos
+What's the exam date for MAPC1112 the MAPC1112 exam details are <MAPC1112> eos
+Do you know when MAPC1112 is the MAPC1112 exam details are <MAPC1112> eos
+Tell me the date of the MAPC1112 exam the MAPC1112 exam details are <MAPC1112> eos
+When does the MAPC1112 test happen the MAPC1112 exam details are <MAPC1112> eos
+Is the MAPC1112 exam this week the MAPC1112 exam details are <MAPC1112> eos
+When are we writing the math exam for computers the MAPC1112 exam details are <MAPC1112> eos
+When is the CONE5111 exam the CONE5111 exam details are <CONE5111> eos
+What's the date for CONE5111 the CONE5111 exam details are <CONE5111> eos
+When do we write CONE5111 the CONE5111 exam details are <CONE5111> eos
+Is CONE5111 scheduled this week the CONE5111 exam details are <CONE5111> eos
+When exactly is the Computer Networks exam the CONE5111 exam details are <CONE5111> eos
+Tell me the CONE5111 exam date the CONE5111 exam details are <CONE5111> eos
+Do you know when CONE5111 is the CONE5111 exam details are <CONE5111> eos
+When is the INSY5232 exam the INSY5111 exam details are <INSY5232> eos
+What day is the INSY5232 exam the INSY5111 exam details are <INSY5232> eos
+When do we write the Information Systems exam the INSY5111 exam details are <INSY5232> eos
+Is INSY5232 happening this week the INSY5111 exam details are <INSY5232> eos
+What is the exam date for INSY5232 the INSY5111 exam details are <INSY5232> eos
+Tell me when INSY5232 is the INSY5111 exam details are <INSY5232> eos
+When is the PROG1132 exam the PROG1132 exam details are <PROG1132> eos
+What's the date of the PROG1132 exam the PROG1132 exam details are <PROG1132> eos
+When do we write PROG1132 the PROG1132 exam details are <PROG1132> eos
+What day is PROG1132 scheduled the PROG1132 exam details are <PROG1132> eos
+Tell me when the programming exam PROG1132 is the PROG1132 exam details are <PROG1132> eos
+Do you know when PROG1132 happens the PROG1132 exam details are <PROG1132> eos
