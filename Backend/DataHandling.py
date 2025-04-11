@@ -1,24 +1,24 @@
-from gensim.models import Word2Vec
+from gensim.models import FastText
 import numpy as np
 import database as db
 
 temp_sentences = ["pad hey how are you im good and you eos","pad pad whats your name my name is loyd eos","what colour is the sky the sky is blue eos"]
 Training_sentences = ["hey how are you ,im good and you eos","whats your name ,my name is loyd eos","what colour is the sky ,the sky is blue eos"]
 temp_sentences = []
-with open("../Frontend/word2vec_training.txt",'r') as file:
+with open("../Backend/word2vec_training.txt",'r') as file:
     for files in file:
         temp_sentences.append((files.strip()).lower())
 Training_sentences = []
-with open("../Frontend/data.txt",'r') as file:
+with open("../Backend/data.txt",'r') as file:
     for files in file:
         Training_sentences.append((files.strip()).lower())
-print(temp_sentences)
+
 sentences = []
 for index in range(len(temp_sentences)):
     tokenized_sentence = temp_sentences[index].split()
     sentences.append(tokenized_sentence)
 
-word2vec_model = Word2Vec(sentences=sentences,vector_size=100,workers=4,window=5,min_count=1)
+word2vec_model = FastText(sentences=sentences,vector_size=100,workers=4,window=5,min_count=1,epochs=10)
 
 
 def word_to_vector(word):
@@ -60,14 +60,16 @@ def Training_Data(window_size):
                 start.pop(0)
                 start.append(x[input_index])
                 if input_index +1 < len(x):
-                    x_training.append(start)
-                    y_training.append(x[input_index+1])  
+                    x_training.append(start.copy())
+                    y_training.append(x[input_index+1]) 
+            x_training.append(start.copy())
+            y_training.append(y[0]) 
             for output_index in range(0,len(y)):
                 start.pop(0)
                 start.append(y[output_index])
-                if output_index < len(y):
+                if output_index+1 < len(y):
                     x_training.append(start.copy())
-                    y_training.append(y[output_index]) 
+                    y_training.append(y[output_index+1]) 
         else:
             x_training.append(x.copy())
             y_training.append(y[0])
@@ -104,7 +106,10 @@ def prompt_to_vec(prompt):
         while len(prompt) < 5:
             prompt.insert(0,"pad")
     for index in range(len(prompt)):
-        prompt_vector.append(word2vec_model.wv[prompt[index]])
+        try:
+            prompt_vector.append(word2vec_model.wv[prompt[index]])
+        except:
+            prompt_vector.append(np.zeros(100))
     return np.array(prompt_vector).flatten()
 
 def slide_prompt(prompt,newword):
@@ -114,13 +119,14 @@ def slide_prompt(prompt,newword):
     return newprompt
 
 def Fromat_respone(response):
+    print(response)
     New_response_list = response.split()
     New_response_list[0] = New_response_list[0].capitalize() #Make first letter capital
     New_response = ""
     for index in range(len(New_response_list)):
         word = New_response_list[index]
         if (word[0] == '<') and (word[-1] == '>') and (word != "<EventList>"):
-            information = db.Retrieve_Module(word)
+            information = db.Retrieve_Module(word.upper())
             New_response += " " + information
         elif word == "<EventList>":
             information = db.RetrieveEvents()

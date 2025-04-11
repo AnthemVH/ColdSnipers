@@ -73,6 +73,7 @@ button:hover {
     border-radius: 12px;
     background-color: #2a2a2a;
     max-width: 1000px;
+    align-self: center;
 }
 
 .event-preview {
@@ -201,6 +202,24 @@ button:hover {
     border-radius: 0px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+.top-right-logo {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    height: 50px;
+    width: auto;
+    z-index: 1000;
+}
+.bot-right-logo {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    height: 40px;
+    width: auto;
+    opacity: 0.8;
+    z-index: 900;
+}
+
 
 
 

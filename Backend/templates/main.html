@@ -30,7 +30,7 @@
   <div class="page-content">
     <div class="page" id="home-page">
       <h2 style="text-transform: capitalize">Welcome, {{ user }}!</h2>
-      <div class="chat-container" style="max-width: 500px">
+      <div class="chat-container" style="max-width: 500px; align-items: center;">
         <div id="chat-output" style="height: 200px; overflow-y: auto; background: #222; padding: 10px;"></div>
         <input type="text" id="chat-input" placeholder="Type your question...">
         <button onclick="sendQuestion()">Send</button>
@@ -281,5 +281,6 @@
       loadEventListPreview();
     };
   </script>
+  <img src="../static/iiemsalogo.png" alt="Logo" class="bot-right-logo">
 </body>
 </html>

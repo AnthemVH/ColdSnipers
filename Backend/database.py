@@ -102,3 +102,8 @@ def UpdateModule(module_name, information):
 def RetrieveModules():
     cursor.execute("SELECT * FROM EmbeddingPlacements WHERE NOT EmbeddingCode = 'EventList'")
     return cursor.fetchall()
+
+def RetrieveModule(module_name):
+    cursor.execute("SELECT Information FROM EmbeddingPlacements WHERE EmbeddingCode = ?", (module_name,))
+    result = cursor.fetchone()
+    return result[0] if result else None
