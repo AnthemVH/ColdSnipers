@@ -94,3 +94,61 @@ button:hover {
     max-width: 80%;
     align-self: flex-start;
 }
+.admin-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+}
+.admin-btn:hover {
+    background-color: #a01404;
+}
+
+
+/* Admin Panel */
+.admin-panel-container{
+    padding: 20px;
+}
+.admin-nav button {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #333333;
+    color: white;
+}
+.update-btn {
+    background-color: #333333;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.update-btn:hover {
+    background-color: #a01404;
+}
+.admin-page {
+    display: none;
+}
