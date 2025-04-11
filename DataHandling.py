@@ -1,12 +1,13 @@
 from gensim.models import Word2Vec
 import numpy as np
-from nltk.tokenize import word_tokenize
 
 temp_sentences = ["pad hey how are you im good and you eos","pad pad whats your name my name is loyd eos","what colour is the sky the sky is blue eos"]
 Training_sentences = ["hey how are you ,im good and you eos","whats your name ,my name is loyd eos","what colour is the sky ,the sky is blue eos"]
 
-sentences = [word_tokenize(sentence.lower()) for sentence in temp_sentences] #To kenizing the sentence
-print(sentences)
+sentences = []
+for index in range(len(temp_sentences)):
+    tokenized_sentence = temp_sentences[index].split()
+    sentences.append(tokenized_sentence)
 
 word2vec_model = Word2Vec(sentences=sentences,vector_size=100,workers=4,window=5,min_count=1)
 
@@ -56,7 +57,6 @@ def Training_Data(window_size):
 
     return x_training,y_training
 
-X,Y = Training_Data(5)
 
 def training_to_vector(Input,outputs):
     x_vector_training = []
@@ -73,8 +73,7 @@ def training_to_vector(Input,outputs):
         y_vector_training.append(word2vec_model.wv[outputs[index]])
     return x_vector_training,y_vector_training
 
-x_vec,y_vec = training_to_vector(X,Y)
-print(x_vec,y_vec)
+
 
 def prompt_to_vec(prompt):
     prompt_vector = []

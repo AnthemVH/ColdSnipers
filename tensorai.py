@@ -27,4 +27,4 @@ def respond(prompt):
         prompt_vec = DH.prompt_to_vec(working_prompt.copy())
     return response
 
-print(respond("pad hey how are you"))
+print(respond("hey how are you"))
