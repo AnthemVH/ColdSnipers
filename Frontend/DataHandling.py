@@ -1,5 +1,6 @@
 from gensim.models import Word2Vec
 import numpy as np
+import database as db
 
 temp_sentences = ["pad hey how are you im good and you eos","pad pad whats your name my name is loyd eos","what colour is the sky the sky is blue eos"]
 Training_sentences = ["hey how are you ,im good and you eos","whats your name ,my name is loyd eos","what colour is the sky ,the sky is blue eos"]
@@ -89,3 +90,24 @@ def slide_prompt(prompt,newword):
     newprompt.pop(0)
     newprompt.append(newword)
     return newprompt
+
+def Fromat_respone(response):
+    New_response_list = response.split()
+    New_response_list[0] = New_response_list[0].capitalize() #Make first letter capital
+    New_response = ""
+    for index in range(len(New_response_list)):
+        word = New_response_list[index]
+        if (word[0] == '<') and (word[-1] == '>') and (word != "<EventList>"):
+            information = db.Retrieve_Module(word)
+            New_response += " " + information
+        elif word == "<EventList>":
+            information = db.RetrieveEvents()
+            New_response += " " + information
+        elif word == "eos":
+            New_response += ""
+        else:
+            New_response += " " + word
+    return (New_response)
+
+
+    

@@ -26,3 +26,8 @@ def respond(prompt):
         response += " " + word
         prompt_vec = DH.prompt_to_vec(working_prompt.copy())
     return response
+
+def Answer_prompt(prompt):
+    response = respond(prompt)
+    new_response = DH.Fromat_respone(response=response)
+    return new_response
