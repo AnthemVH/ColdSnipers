@@ -15,6 +15,7 @@ X,Y = DH.training_to_vector(x,y)
 model.fit(np.array(X),np.array(Y),epochs=1,verbose=1)
 
 def respond(prompt):
+    print("Prompted")
     working_prompt = prompt.split()
     prompt_vec = DH.prompt_to_vec(working_prompt.copy())
     word = ""

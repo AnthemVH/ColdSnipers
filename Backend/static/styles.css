@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle, #a01404 0%, #1a1a1a 100%);
+    color: white;
+}
+
+#sign-in-page, .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+input, button {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    background-color: #a01404;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #750d01;
+}
+
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.nav-bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-bubble:hover {
+    width: 150px;
+    border-radius: 50px;
+    justify-content: space-evenly;
+}
+
+.page-content {
+    margin-left: 100px;
+    padding: 20px;
+}
+
+.chat-container {
+    border: 1px radial-gradient(circle, #a01404 0%, #1a1a1a 100%);
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #2a2a2a;
+    max-width: 1000px;
+}
+
+.event-preview {
+    margin-top: 20px;
+}
+.nav-bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-bubble:hover {
+    width: 140px;
+    border-radius: 25px;
+    justify-content: flex-start;
+    padding-left: 15px;
+    background-color: #a01404;
+}
+
+.nav-bubble span {
+    display: none;
+    margin-left: 10px;
+}
+
+.nav-bubble:hover span {
+    display: inline;
+}
+
+.profile-menu {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+#profileBtn {
+    background-color: #333333;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+#profileBtn:hover {
+    background-color: #a01404;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    background-color: #333333;
+    border: 1px solid #ccc;
+    min-width: 150px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    text-transform: capitalize;
+}
+
+.dropdown-content p {
+    margin: 0 0 10px;
+}
+
+.dropdown-content button {
+    width: 100%;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+#calendar-container {
+    margin: 20px 0;
+}
+
+#calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendar th, #calendar td {
+    border: 1px solid #ccc;
+    width: 14.28%;
+    height: 80px;
+    vertical-align: top;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+#calendar td .event {
+    background-color: radial-gradient(circle, #a01404 0%, #1a1a1a 100%);
+    margin-top: 4px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.75em;
+}
+.dashboard-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.dashboard-card {
+    background-color: radial-gradient(circle, #a01404 0%, #1a1a1a 100%);
+    padding: 20px;
+    flex: 1;
+    min-width: 200px;
+    border-radius: 0px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+

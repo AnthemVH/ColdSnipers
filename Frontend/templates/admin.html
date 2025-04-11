@@ -18,9 +18,9 @@
             <h2>Events Page</h2>
             <div class = "event-action">
                 <h3>Add Event</h3>
-                <form id = "addEventForm">
-                    <input type="text" name="eventName" placeholder="Event Name" required>
-                    <input type="text" name="eventInfo" placeholder="Event Information" required>
+                <form id="addEventForm">
+                    <input type="text" id="eventName" name="eventName" placeholder="Event Name" required>
+                    <input type="text" id="eventInfo" name="eventInfo" placeholder="Event Information" required>
                     <button type="submit">Add Event</button>
                 </form>
             </div>
@@ -58,7 +58,7 @@
                 </tbody>
             </table>
         </div>
-        <div class = "admin-page" id = "exams">
+        <div class="admin-page" id="exams">
             <h2>Exams Page</h2>
             <table>
                 <thead>
@@ -87,22 +87,29 @@
                     </tr>
                     {% endfor %}
                 </tbody>
-            </table>
+            </table> <!-- Closing table tag added -->
         </div>
     </div>
     <script>
         function showPage(page) {
             const pages = document.querySelectorAll('.admin-page');
-            pages.forEach(p => p.style.display = 'none');
-            document.getElementById(page).style.display = 'block'; 
+            pages.forEach(p => p.style.display = 'none'); // Hides all pages
+            const selectedPage = document.getElementById(page);
+            if (selectedPage) {
+                console.log(`Showing page: ${page}`); // Debugging log
+                selectedPage.style.display = 'block'; // Shows the selected page
+            } else {
+                console.error(`Page with id "${page}" not found.`);
+            }
         }
         showPage('exams');
 
         document.getElementById("addEventForm").addEventListener("submit", function(event) {
-            
+            event.preventDefault();
             
             const eventName = document.getElementById("eventName").value;
             const eventInfo = document.getElementById("eventInfo").value;
+            
             console.log(eventName, eventInfo);
             fetch('/add_event', {
                 method: 'POST',
@@ -155,5 +162,10 @@
                 location.reload();
             });
         });
+
+        document.querySelector('button[onclick="showPage(\'exams\')"]').addEventListener('click', () => {
+            console.log('Exams button clicked');
+        });
     </script>
 </body>
+</html>

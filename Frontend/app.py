@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from tensorai import respond
+from tensorai import Answer_prompt
 from database import *
 
 app = Flask(__name__)
@@ -47,13 +47,6 @@ def remove_event():
         return jsonify({'message': 'Event removed successfully!'})
     return jsonify({'error': 'Invalid data!'}), 400
 
-
-
-
-
-
-
-
 @app.route('/ask', methods=['POST'])
 def ask():
     data = request.get_json()
@@ -61,7 +54,7 @@ def ask():
 
     if user_message:
         print(f"User message: {user_message}")
-        response = respond(user_message.lower())
+        response = Answer_prompt(user_message.lower())
         return jsonify({'response': response})
     return jsonify({'error': 'No message provided'})
 
