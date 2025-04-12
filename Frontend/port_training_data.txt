@@ -1,0 +1,54 @@
+Onde posso encontrar a central de atendimento ou o balcão de informações do campus: Building A eos
+Onde fica a sala dos CROs: Building A no andar de cima à sua esquerda eos
+Onde fica a clínica da escola: Building E no térreo, sala de seminários 12 eos
+Em qual andar fica a sala de seminários 8: Building E segundo andar eos
+Qual prédio é o laboratório de PC 9: Building F segundo andar eos
+Onde está localizado o conselheiro: Building F no final da sala eos
+Onde posso encontrar o laboratório de PC 7 & 8: Building C primeiro andar, siga as placas eos
+Existe um elevador neste prédio A, B, C, D, E, F: A (não), B (não), C (não), D (não), E (sim), F (sim) eos
+Existem rotas acessíveis para cadeirantes no campus: Sim, no Building F eos
+Que horas fecha o térreo da biblioteca da escola: 18:00h eos
+Existem máquinas de venda por perto: Building D térreo e Building E térreo eos
+Onde fica o escritório de auxílio financeiro: Building A primeiro andar, vire à esquerda eos
+Quando começam minhas provas: Para a maioria dos alunos, na segunda semana de junho eos
+Onde posso imprimir meus trabalhos no campus: Building E, peça ao operador de TI para imprimir eos
+Quem é o professor de Redes de Computadores/CONE5111: Rassaki Abdoul - arassaki@iiemsa.co.za eos
+Quem é o professor de Programação/PROG5121: Yoland Kanyama - email@iie.edu.za eos
+Quem é o professor de Sistemas de Informação/INSY5112: Ayokunie Familua - afamilua@iie.ac.za eos
+Quem é o professor de Princípios Matemáticos para Computação/MAPC5112: Ainda será comunicado eos
+Quais trabalhos/provas são para abril: CONE5111(25th April-assignment), MAPC5112(29 April-assignment),PROG5121(22 April-assignment),INSY5111(8 April-assignment) eos
+Quais trabalhos/provas são para maio: CONE5111(20 May - assignment), MAPC5112(TBC), PROG5121(23 May - assignment),INSY5111(5 May - Test) eos
+Quais são os emails dos tutores de Redes de Computadores/CONE5111: CONE5111(Neha Sinh - ST10433945@imconnect.edu.za/ Vimbai Monics - st 10356323@imconnect.edu.za) eos
+Quais são os emails dos tutores de Programação/PROG5121: PROG5121(Ranil Monterio - ST10448423@imconnect.edu.za/ Wandile Zuke -ST10448895@imconnect.edu.za/ Enhle Mokolo - ST10443720@imconnect.edu.zA) eos
+Qual é o email do tutor de Princípios Matemáticos para Computação/MAPC5112: (Musa Janda - ST10456109@imconnect.edu.za) eos
+Qual é o email dos tutores de Sistemas de Informação/INSY5112: Ainda não foi anunciado eos
+Onde fica a Sala 4,5,6: Building C térreo eos
+Onde fica a sala 1,2 & 3: Térreo do Building B eos
+Onde fica a sala de tutoria 3,4 & 5: 1º andar Building B eos
+Onde fica o Laboratório de PC 4 (Engenharia): 1º andar Building B eos
+Onde fica os escritórios de TI: 1º andar Building B eos
+Onde fica as ciências sociais: 1º andar do Building C eos
+Onde fica a Escola de Engenharia: 1º andar do Building C eos
+Onde fica Ciências e Saúde: 1º andar do Building C eos
+Onde ficam os Escritórios de Ensino e Aprendizado: 1º andar do Building C eos
+Onde ficam as Salas de Tutoria 15,16,17 & 18: 1º andar do Building C eos
+Onde fica o Laboratório de PC 7 e 8: 1º andar Building C eos
+Onde fica a Gestão da Escola: Andar inferior do Building D eos
+Onde ficam as salas de tutoria 2,10 e 11: Andar inferior do Building D eos
+Onde ficam as salas de seminário 1,2 e 3: Térreo do Building CD eos
+Onde fica o Centro de Mídia: Térreo do Building D eos
+Onde fica o Serviço de Alimentação: Térreo do Building D ou térreo do Building E eos
+Onde fica a Escola de Finanças e Contabilidade: 1º andar do Building D eos
+Onde fica a Escola de TI: 1º andar do Building D eos
+Onde fica a Sala de Tutoria 14: 1º andar do Building D eos
+Onde ficam os Laboratórios de PC 5 e 6: 1º andar do Building D eos
+Onde fica a Biblioteca: Térreo do Building E eos
+Onde fica a Unidade de Pesquisa e Estudos de Pós-graduação: 1º andar do Building E eos
+Onde fica a sala de seminário 10: 1º andar do Building E eos
+Onde fica a Escola de Educação: 2º andar do Building E eos
+Onde ficam as salas de seminário 5,6,7,8,9,14,15 e 16: 2º andar do Building E eos
+Onde fica a Academia: Andar inferior do Building F eos
+Quando é a prova de MAPC1112: os detalhes da prova de MAPC1112 são <MAPC1112> eos
+Quando é a prova de CONE5111: os detalhes da prova de CONE5111 são <CONE5111> eos
+Quando é a prova de INSY5232: os detalhes da prova de INSY5111 são <INSY5232> eos
+Quando é a prova de PROG1132: os detalhes da prova de PROG1132 são <PROG1132> eos
