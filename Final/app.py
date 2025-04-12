@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 import os
 from tensorai import Answer_prompt
+from Afrikaans_model import Answer_prompt_Afrikaans
+from Port_model import Answer_prompt_Port
+from Loyd import Answer_prompt_Loyd
 from database import *
 
 app = Flask(__name__)
@@ -43,13 +46,35 @@ def logout():
 @app.route('/ask', methods=['POST'])
 def ask():
     data = request.get_json()
-    user_message = data.get('message')
+    print(f"Received data: {data}")  
 
-    if user_message:
-        print(f"User message: {user_message}")
-        response = Answer_prompt(user_message.lower())
+    user_message = data.get('message').lower()
+    selected_model = data.get('model', 'tensorai')  
+
+    if not user_message:
+        print("No message provided")  
+        return jsonify({'error': 'No message provided'})
+
+    print(f"User message: {user_message} | Model: {selected_model}")  # Debug log
+
+    try:
+        if selected_model == "afrikaans":
+            response = Answer_prompt_Afrikaans(user_message.lower())
+        elif selected_model == "portuguese":
+            response = Answer_prompt_Port(user_message.lower())
+        elif selected_model == "loyd":
+            response = Answer_prompt_Loyd(user_message.lower())
+        else:
+            response = Answer_prompt(user_message.lower())  # default: tensorai
+
+        print(f"Response: {response}")  # Debug log
         return jsonify({'response': response})
-    return jsonify({'error': 'No message provided'})
+
+    except Exception as e:
+        print(f"Error with selected model: {e}")  # Debug log
+        return jsonify({'error': 'Model failed to respond'})
+
+
 @app.route('/admin')
 def admin_panel():
     return render_template('index.html', user_name=session.get('user_name', 'Admin'))
@@ -129,7 +154,7 @@ def update_module_exam():
         return jsonify({"status": "error", "message": str(e)}), 500
 @app.route('/get_modules')
 def get_modules():
-    modules = RetrieveModules()  # List of tuples
+    modules = RetrieveModules()  
     return jsonify([{"name": name, "info": info} for name, info in modules])
 
 

@@ -1,6 +1,7 @@
 import tensorflow as tf
 import numpy as np
-import DataHandling as DH
+import data_handling_afrikaans as DH
+from tensorflow.keras.models import load_model
 
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(300,activation="leaky_relu",input_shape=(500,)),
@@ -8,13 +9,13 @@ model = tf.keras.Sequential([
 ])
 
 model.compile(optimizer='adam',loss=tf.keras.losses.CosineSimilarity(axis=1),metrics=['accuracy'])
-
+model = load_model("../Final/afrikaans_model.keras") 
 x,y = DH.Training_Data(5)
 
 X,Y = DH.training_to_vector(x,y)
 
-model.fit(np.array(X),np.array(Y),epochs=1,verbose=1)
-
+#model.fit(np.array(X),np.array(Y),epochs=2000,verbose=1)
+#model.save("afrikaans_model.keras")
 def respond(prompt):
     prompt_bigger_window = False
     if len(prompt.split()) > 5:
@@ -40,7 +41,5 @@ def respond(prompt):
     print(response)
     return response.strip()
 
-def Answer_prompt(prompt):
+def Answer_prompt_Afrikaans(prompt):
     return DH.Fromat_respone(response=respond(prompt))
-
-print(Answer_prompt("when is the mapc1112 exam"))

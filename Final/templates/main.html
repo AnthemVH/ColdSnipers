@@ -33,7 +33,7 @@
       <div class="chat-container" style="max-width: 500px; align-items: center;">
         <div id="chat-output" style="height: 200px; overflow-y: auto; background: #222; padding: 10px;"></div>
         <input type="text" id="chat-input" placeholder="Type your question...">
-        <button onclick="sendQuestion()">Send</button>
+        <button onclick="sendQuestion('chat-input', 'chat-output', 'modelSelect')">Send</button>
       </div>
       <div class="event-preview">
         <h3>Upcoming Events</h3>
@@ -62,12 +62,25 @@
 
     <div class="page" id="chat-page" style="display:none;">
       <h2>Chat (Fullscreen)</h2>
+    
       <div class="chat-container">
-        <div id="chat-output" style="height: 300px; overflow-y: auto; background: #222; padding: 10px;"></div>
-        <input type="text" id="chat-input" placeholder="Type your question...">
-        <button onclick="sendQuestion()">Send</button>
+        <label for="modelSelect"><strong>Choose Language:</strong></label>
+        <select id="modelSelect" style="margin-bottom: 10px;">
+          <option value="tensorai" selected>English (Tensorflow)</option>
+          <option value="afrikaans">Afrikaans (Tensorflow)</option>
+          <option value="portuguese">Portuguese (Tensorflow)</option>
+          <option value="loyd">Loyd</option>
+        </select>
+    
+        <div id="chat2-output" style="height: 300px; overflow-y: auto; background: #222; padding: 10px; color: white; margin-bottom: 10px;"></div>
+    
+        <input type="text" id="chat2-input" placeholder="Type your question..." style="width: 70%;">
+        <button onclick="sendQuestion('chat2-input', 'chat2-output', 'modelSelect2')">Send</button>
+
       </div>
     </div>
+    
+    
 
     {% if admin %}
     <div class="page" id="dashboard-page" style="display:none;">
@@ -126,28 +139,56 @@
       pages.forEach(page => {
         page.style.display = (page.id === pageId) ? 'block' : 'none';
       });
+
+      // Initialize chat-page elements if switching to chat-page
+      if (pageId === 'chat-page') {
+        const input = document.getElementById('chat2-input');
+        const output = document.getElementById('chat2-output');
+        const modelSelect = document.getElementById('modelSelect2');
+
+        if (!input || !output || !modelSelect) {
+            console.error("Chat-page elements are not properly loaded.");
+        }
+      }
     }
 
-    async function sendQuestion() {
-      const input = document.getElementById("chat-input");
-      const output = document.getElementById("chat-output");
-      const question = input.value.trim();
-      if (!question) return;
+  async function sendQuestion(inputId = 'chat-input', outputId = 'chat-output', modelSelectId = 'modelSelect') {
+  console.log("sendQuestion triggered with:", { inputId, outputId, modelSelectId });
 
-      output.innerHTML += `<div><strong>You:</strong> ${question}</div>`;
-      input.value = "";
+  const input = document.getElementById(inputId);
+  const output = document.getElementById(outputId);
+  const model = document.getElementById(modelSelectId)?.value || "tensorai";
 
-      const response = await fetch("/ask", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: question })
-      });
+  if (!input || !output || !model) {
+    console.error("One or more elements are missing:", { input, output, model });
+    return;
+  }
 
-      const data = await response.json();
-      const answer = data.response;
-      output.innerHTML += `<div><strong>AI:</strong> ${answer}</div>`;
-      output.scrollTop = output.scrollHeight;
-    }
+  const question = input.value.trim();
+  if (!question) return;
+
+  output.innerHTML += `<div><strong>You:</strong> ${question}</div>`;
+  input.value = "";
+
+  try {
+    const response = await fetch("/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: question, model: model })
+    });
+
+    const data = await response.json();
+    const answer = data.response || "No response from the server.";
+    output.innerHTML += `<div><strong>AI:</strong> ${answer}</div>`;
+    output.scrollTop = output.scrollHeight;
+  } catch (error) {
+    console.error("Error fetching response:", error);
+    output.innerHTML += `<div><strong>AI:</strong> Error fetching response.</div>`;
+  }
+}
+
+
+
 
     document.getElementById("profileBtn").addEventListener("click", () => {
       const dropdown = document.getElementById("profileDropdown");

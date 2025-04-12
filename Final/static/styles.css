@@ -219,7 +219,18 @@ button:hover {
     opacity: 0.8;
     z-index: 900;
 }
-
+#modelSelect {
+    margin: 8px 0;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    
+  }
+#modelSelect:hover {
+    background-color: #750d01;
+    border-color: #750d01;
+    color: white;
+  }
 
 
 
