@@ -25,7 +25,7 @@ def load_model(path="model_weights.npz"):
     bias_two = data["bias_two"]
     print(f"Model loaded from {path}")
 
-#load_model()
+load_model()
 def leaky_relu(x):
     return np.where(x > 0, x, 0.001 * x)
 
@@ -125,7 +125,7 @@ def Answer_prompt(prompt):
 
 x, y = DH.Training_Data(5)
 X, Y = DH.training_to_vector(x, y)
-train(X, Y, epochs=10000, lr=0.01)
+train(X, Y, epochs=10000, lr=0.005)
 save_model()
 
 print("\nResponse:", Answer_prompt("when is my exam starting"))

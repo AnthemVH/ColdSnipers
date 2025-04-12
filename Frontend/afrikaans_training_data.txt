@@ -1,0 +1,78 @@
+Waar kan ek die kampus hulp lessenaar of inligtingsentrum kry: Gebou A eos
+Waar is die kamer vir die CROs: Gebou A bo by jou linkerkant eos
+Waar is die kliniek van die skool: Gebou E grondvloer, seminaarkamer 12 eos
+Op watter verdieping is seminaarkamer 8: Gebou E tweede verdieping eos
+Watter gebou is PC-lab 9: Gebou F tweede verdieping eos
+Waar is die berader geleë: Gebou F aan die einde van die kamer eos
+Waar kan ek PC-lab 7 & 8 kry: Gebou C eerste verdieping, volg die aanwysings eos
+Is daar 'n hysbak in gebou A, B, C, D, E, F: A (nee), B (nee), C (nee), D (nee), E (ja), F (ja) eos
+Is daar rolstoeltoeganklike roetes op die kampus: Ja, in Gebou F eos
+Hoe laat maak die biblioteek op die grondvloer toe: 18:00h eos
+Is daar verkoopsmasjiene naby: Gebou D grondvloer en Gebou E grondvloer eos
+Waar is die finansiële hulp kantoor: Gebou A eerste verdieping, draai links eos
+Wanneer begin my eksamen: Vir meeste studente, die tweede week van Junie eos
+Waar kan ek my opdragte op kampus druk: Gebou E, vra die IT-operateur vir drukwerk eos
+Wie is die dosent vir Computer Networks/CONE5111: Rassaki Abdoul - arassaki@iiemsa.co.za eos
+Wie is die dosent vir Programming/PROG5121: Yoland Kanyama - email@iie.edu.za eos
+Wie is die dosent vir Information System/INSY5112: Ayokunie Familua - afamilua@iie.ac.za eos
+Wie is die dosent vir Mathematical Principles for Computer/MAPC5112: Moet nog gekommunikeer word eos
+Watter take/toetse is verskuldig in April: CONE5111(25 April - opdrag), MAPC5112(29 April - opdrag), PROG5121(22 April - opdrag), INSY5111(8 April - opdrag) eos
+Watter take/toetse is verskuldig in Mei: CONE5111(20 Mei - opdrag), MAPC5112(NTK), PROG5121(23 Mei - opdrag), INSY5111(5 Mei - toets) eos
+Wat is die tutors se e-posadresse vir Computer Networks/CONE5111: CONE5111(Neha Sinh - ST10433945@imconnect.edu.za / Vimbai Monics - ST10356323@imconnect.edu.za) eos
+Wat is die tutors se e-posadresse vir Programming/PROG5121: PROG5121(Ranil Monterio - ST10448423@imconnect.edu.za / Wandile Zuke - ST10448895@imconnect.edu.za / Enhle Mokolo - ST10443720@imconnect.edu.zA) eos
+Wat is die tutor se e-posadres vir Mathematical Principles for Computer/MAPC5112: (Musa Janda - ST10456109@imconnect.edu.za) eos
+Wat is die tutors se e-posadres vir Information System/INSY5112: Moet nog aangekondig word eos
+Waar is Lesing 4,5,6: Gebou C grondvloer eos
+Waar is lesing 1,2 & 3: Grondvloer in Gebou B eos
+Waar is die tutoriaalkamer 3,4 & 5: 1ste verdieping Gebou B eos
+Waar is PC Lab 4 (Ingenieurswese): 1ste verdieping Gebou B eos
+Waar is die IT-kantore: 1ste verdieping Gebou B eos
+Waar is Sosiale Wetenskappe: 1ste verdieping van Gebou C eos
+Waar is die Fakulteit Ingenieurswese: 1ste verdieping van Gebou C eos
+Waar is Wetenskap en Gesondheid: 1ste verdieping van Gebou C eos
+Waar is die Onderwys- en Leer-kantore: 1ste verdieping van Gebou C eos
+Waar is die Tutoriaalkamers 15,16,17 & 18: 1ste verdieping van Gebou C eos
+Waar is PC Lab 7 en 8: 1ste verdieping Gebou C eos
+Waar is die skoolbestuur: Onderste vloer Gebou D eos
+Waar is tutoriaalkamer 2,10 en 11: Onderste grondvloer Gebou D eos
+Waar is seminaarkamers 1,2 en 3: Grondvloer Gebou CD eos
+Waar is die Mediacentrum: Grondvloer Gebou D eos
+Waar is die Voedseldiens: Grondvloer Gebou D of grondvloer in Gebou E eos
+Waar is die Fakulteit Finansies en Rekeningkunde: 1ste verdieping Gebou D eos
+Waar is die Fakulteit IT: 1ste verdieping van Gebou D eos
+Waar is die Tutoriaalkamer 14: 1ste verdieping van Gebou D eos
+Waar is PC Labs 5 en 6: 1ste verdieping in Gebou D eos
+Waar is die Biblioteek: Grondvloer Gebou E eos
+Waar is die Navorsings- en Nagraadse Eenheid: 1ste verdieping in Gebou E eos
+Waar is seminaarkamer 10: 1ste verdieping in Gebou E eos
+Waar is die Fakulteit Onderwys: 2de verdieping in Gebou E eos
+Waar is seminaarkamers 5,6,7,8,9,14,15 en 16: 2de verdieping in Gebou E eos
+Waar is die Gimnasium: onderste grondvloer in Gebou F eos
+Wanneer is die MAPC1112 eksamen : die MAPC1112 eksamenbesonderhede is <MAPC1112> eos
+Wanneer is die CONE5111 eksamen : die CONE5111 eksamenbesonderhede is <CONE5111> eos
+Wanneer is die INSY5232 eksamen : die INSY5111 eksamenbesonderhede is <INSY5232> eos
+Wanneer is die PROG1132 eksamen : die PROG1132 eksamenbesonderhede is <PROG1132> eos
+Op watter datum is die MAPC1112 eksamen geskeduleer : die MAPC1112 eksamenbesonderhede is <MAPC1112> eos
+Wanneer skryf ons MAPC1112 : die MAPC1112 eksamenbesonderhede is <MAPC1112> eos
+Wat is die eksamendatum vir MAPC1112 : die MAPC1112 eksamenbesonderhede is <MAPC1112> eos
+Weet jy wanneer MAPC1112 is : die MAPC1112 eksamenbesonderhede is <MAPC1112> eos
+Sê vir my die datum van die MAPC1112 eksamen : die MAPC1112 eksamenbesonderhede is <MAPC1112> eos
+Wanneer is die MAPC1112 toets : die MAPC1112 eksamenbesonderhede is <MAPC1112> eos
+Is die MAPC1112 eksamen hierdie week : die MAPC1112 eksamenbesonderhede is <MAPC1112> eos
+Wanneer skryf ons die wiskunde-eksamen vir rekenaars: die MAPC1112 eksamenbesonderhede is <MAPC1112> eos
+Wat is die datum vir CONE5111 : die CONE5111 eksamenbesonderhede is <CONE5111> eos
+Wanneer skryf ons CONE5111 : die CONE5111 eksamenbesonderhede is <CONE5111> eos
+Is CONE5111 geskeduleer vir hierdie week : die CONE5111 eksamenbesonderhede is <CONE5111> eos
+Wanneer presies is die Computer Networks eksamen : die CONE5111 eksamenbesonderhede is <CONE5111> eos
+Sê vir my die eksamendatum vir CONE5111 : die CONE5111 eksamenbesonderhede is <CONE5111> eos
+Weet jy wanneer CONE5111 is : die CONE5111 eksamenbesonderhede is <CONE5111> eos
+Watter dag is die INSY5232 eksamen : die INSY5111 eksamenbesonderhede is <INSY5232> eos
+Wanneer skryf ons die Information Systems eksamen : die INSY5111 eksamenbesonderhede is <INSY5232> eos
+Gaan INSY5232 hierdie week plaasvind : die INSY5111 eksamenbesonderhede is <INSY5232> eos
+Wat is die eksamendatum vir INSY5232 : die INSY5111 eksamenbesonderhede is <INSY5232> eos
+Sê vir my wanneer INSY5232 is : die INSY5111 eksamenbesonderhede is <INSY5232> eos
+Wat is die datum van die PROG1132 eksamen : die PROG1132 eksamenbesonderhede is <PROG1132> eos
+Wanneer skryf ons PROG1132 : die PROG1132 eksamenbesonderhede is <PROG1132> eos
+Watter dag is PROG1132 geskeduleer : die PROG1132 eksamenbesonderhede is <PROG1132> eos
+Sê vir my wanneer die programmeringseksamen PROG1132 is : die PROG1132 eksamenbesonderhede is <PROG1132> eos
+Weet jy wanneer PROG1132 plaasvind : die PROG1132 eksamenbesonderhede is <PROG1132> eos

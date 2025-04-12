@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-import DataHandling as DH
+import port_data_handling as DH
 from tensorflow.keras.models import load_model
 
 model = tf.keras.Sequential([
@@ -9,13 +9,13 @@ model = tf.keras.Sequential([
 ])
 
 model.compile(optimizer='adam',loss=tf.keras.losses.CosineSimilarity(axis=1),metrics=['accuracy'])
-model = load_model("english_model.keras") 
+model = load_model("port_model.keras") 
 x,y = DH.Training_Data(5)
 
 X,Y = DH.training_to_vector(x,y)
 
 #model.fit(np.array(X),np.array(Y),epochs=2000,verbose=1)
-#model.save("english_model.keras")
+#model.save("port_model.keras")
 def respond(prompt):
     prompt_bigger_window = False
     if len(prompt.split()) > 5:
@@ -43,5 +43,3 @@ def respond(prompt):
 
 def Answer_prompt(prompt):
     return DH.Fromat_respone(response=respond(prompt))
-
-print(Answer_prompt("when is the mapc1112 exam"))
