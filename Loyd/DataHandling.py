@@ -5,11 +5,11 @@ import database as db
 temp_sentences = ["pad hey how are you im good and you eos","pad pad whats your name my name is loyd eos","what colour is the sky the sky is blue eos"]
 Training_sentences = ["hey how are you ,im good and you eos","whats your name ,my name is loyd eos","what colour is the sky ,the sky is blue eos"]
 temp_sentences = []
-with open("../Frontend/word2vec_training.txt",'r') as file:
+with open("../Backend/word2vec_training.txt",'r') as file:
     for files in file:
         temp_sentences.append((files.strip()).lower())
 Training_sentences = []
-with open("../Frontend/data.txt",'r') as file:
+with open("../Backend/data.txt",'r') as file:
     for files in file:
         Training_sentences.append((files.strip()).lower())
 
