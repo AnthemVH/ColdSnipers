@@ -126,6 +126,6 @@ def Answer_prompt(prompt):
 x, y = DH.Training_Data(5)
 X, Y = DH.training_to_vector(x, y)
 #train(X, Y, epochs=10000, lr=0.005)
-s#ave_model()
+#save_model()
 
 print("\nResponse:", Answer_prompt("when is my exam starting"))
