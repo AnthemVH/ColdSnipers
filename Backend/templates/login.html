@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+  
     <div class="container" id="sign-in-page">
         <h1>Sign In</h1>
         <form method="POST">
@@ -16,5 +17,8 @@
             <p style="color: red;">{{ error }}</p>
         {% endif %}
     </div>
+    <img src="../static/iiemsalogo.png" alt="Logo" class="top-right-logo">
 </body>
+
+
 </html>
